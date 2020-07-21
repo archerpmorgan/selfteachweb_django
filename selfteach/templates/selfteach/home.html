@@ -1,0 +1,87 @@
+{% extends "selfteach/base.html" %} {% block content %}
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">Selfteach</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Selfteach</span><br>
+        <span class="w3-large">Make your own sense</span>
+    </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-white" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">Current Statistical Summary</h3>
+    <p class="w3-center w3-large"></p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+        <div class="w3-quarter">
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+            <p class="w3-large">Responsive</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Passion</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Design</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div class="w3-quarter">
+            <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+            <p class="w3-large">Support</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">14</span>
+        <br>Subjects
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">55</span>
+        <br>Books
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">89</span>
+        <br>Problems
+    </div>
+    <div class="w3-quarter">
+        <span class="w3-xxlarge">150</span>
+        <br>Problems Completed
+    </div>
+</div>
+
+<p>for each book, give individual stats</p>
+
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+        } else {
+            mySidebar.style.display = 'block';
+        }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+</script>
+{% endblock content %}
